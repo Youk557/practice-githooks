@@ -1,9 +1,7 @@
-top=$(git rev-parse --show-toplevel)
-gitconfig=$top/.gitconfig
-githooks=$top/.githooks
+root=$(git rev-parse --show-superproject-working-tree)
+submodule=$(git rev-parse --show-toplevel)
+
+githooks=$submodule/githooks
 
 # configure to read our .gitconfig in .git/config
-git config --local include.path $gitconfig
-
-# configure to read our .githooks in .gitconfig
-git config -f $gitconfig core.hooksPath $githooks
+git config -f $root/.git/config core.hooksPath $githooks
