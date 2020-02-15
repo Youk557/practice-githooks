@@ -1,1 +1,2 @@
+#!/bin/sh
 echo "executing git commit"
