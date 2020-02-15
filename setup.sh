@@ -1,3 +1,4 @@
+#!/bin/sh
 root=$(git rev-parse --show-superproject-working-tree)
 submodule=$(git rev-parse --show-toplevel)
 
